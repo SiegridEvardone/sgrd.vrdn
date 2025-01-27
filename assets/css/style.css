@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap');
+
+*{
+  font-family: "IBM Plex Mono", serif;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+ /*NAV BAR START*/
+.navbar-brand, h1, .typing-text, h3{
+  font-family: "Abhaya Libre", serif;
+}
+
+nav{
+  border-bottom: solid 1px black;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+nav li a{
+  display: inline-block;
+  position: relative;
+  color: black;
+}
+
+nav li a:after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black; 
+  transform-origin: bottom right;
+  transition: transform 0.30s ease-out;
+}
+
+nav li a:hover:after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+/*NAV BAR END*/
+
+/*HERO PAGE START*/
+#typing::after {
+  content: "|";
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
