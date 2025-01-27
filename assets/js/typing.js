@@ -33,5 +33,4 @@ function typeEffect() {
   setTimeout(typeEffect, typingSpeed);
 }
 
-// Start the typing effect
 typeEffect();
